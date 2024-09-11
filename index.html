@@ -19,7 +19,8 @@
           <a class="navbar-brand" href="#">Instagram</a>
           </div>            
             <div class="d-flex align-items-right justify-content-end">
-              <button class="btn btn-success pe-2" type="submit">Create New Post</button>
+              <button type="button" class="btn btn-success pe-2" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Create New Post</button>
               <div class="dropdown ps-2">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
@@ -36,6 +37,44 @@
             </div>
         </div>
     </nav>
+<!--Modal-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create a New Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Caption:</label>
+            <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+            <div class="row p-2">
+              <button class=" col-1 modal-icons mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 18 18">
+                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"/>
+                </svg>
+              </button>              
+              <button class="col-1 modal-icons mt-1 ms-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 18 18">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+              </button>
+            </div>            
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Publish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- toggle grid-->
 <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
@@ -57,31 +96,40 @@
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
     <div class="row">
-        <div class="d-flex justify-content-center align-center mt-5">
-          <div class="col-3 ms-3 me-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
-          <div class="col-3 mx-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
-          <div class="col-3 me-2 ms-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="lorem picsum"></div>
+        <div class="d-flex justify-content-center align-center mt-5 mb-1">
+          <div class="col-3 ms-3 me-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
+          <div class="col-3 mx-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
+          <div class="col-3 me-2 ms-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="lorem picsum"></div>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="d-flex justify-content-center align-center mt-1">
-          <div class="col-3 ms-3 me-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
-          <div class="col-3 mx-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
-          <div class="col-3 me-2 ms-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="lorem picsum"></div>
+        <div class="d-flex justify-content-center align-center mt-1 mb-1">
+          <div class="col-3 ms-3 me-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
+          <div class="col-3 mx-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
+          <div class="col-3 me-2 ms-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="lorem picsum"></div>
         </div> 
     </div>
     <div class="row justify-content-center">
-        <div class="d-flex justify-content-center align-center mt-1">
-          <div class="col-3 ms-3 me-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
-          <div class="col-3 mx-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
-          <div class="col-3 me-2 ms-0 mb-1"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="lorem picsum"></div>
+        <div class="d-flex justify-content-center align-center mt-1 mb-1">
+          <div class="col-3 ms-3 me-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
+          <div class="col-3 mx-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="..."></div>
+          <div class="col-3 me-2 ms-0"><img src="https://picsum.photos/300" class="img-fluid d-block" alt="lorem picsum"></div>
         </div>
      </div>
   </div>  
 
   <div class="tab-pane fade justify-content-center" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-    <div class="row"></div>
-      <div class="card" style="width: 35rem;">
+    <div class="row">
+      <div class="col-8 card mx-auto border rounded" style="width: 35rem;">
+        <div class="card-header">My Crazy Dog Spark!</div>
+        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"><strong>506 Likes</strong></p>
+          <p>Photo posted to Instragram.</p>
+        </div>
+      </div>
+    <br>
+      <div class="col-8 card mx-auto border rounded" style="width: 35rem;">
         <div class="card-header">This is the header!</div>
         <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
         <div class="card-body">
@@ -89,12 +137,13 @@
         </div>
       </div>
     <br>
-    <div class="card" style="width: 35rem;">
-      <div class="card-header">This is the header!</div>
-      <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
+      <div class="col-8 card mx-auto border rounded" style="width: 35rem;">
+        <div class="card-header">This is the header!</div>
+        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>      
     </div>
   </div>
 </div> 
